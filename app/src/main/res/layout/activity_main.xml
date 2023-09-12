@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/prueba"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/opc"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ib_1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/burger" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hamburguesa"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/descripcion_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deliciosa hamburguesa con carne, lechuga y tomate."
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/precio_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$8.000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/mayo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mayonesa" />
+
+                        <CheckBox
+                            android:id="@+id/ketchup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketchup" />
+
+                        <CheckBox
+                            android:id="@+id/picante"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Salsa Picante" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/bt_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Agregar" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RadioGroup
+                android:id="@+id/metodopago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/efectivo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Efectivo" />
+
+                <RadioButton
+                    android:id="@+id/debito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Débito" />
+
+                <RadioButton
+                    android:id="@+id/credito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crédito" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/pagar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pagar" />
+
+            <ProgressBar
+                android:id="@+id/pbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ToggleButton
+                android:id="@+id/tb1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RatingBar
+                android:id="@+id/rbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:numStars="5"
+                android:visibility="visible" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Name" />
+
+                    <Button
+                        android:id="@+id/button10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Button" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextText4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Name" />
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Button" />
+                </TableRow>
+            </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

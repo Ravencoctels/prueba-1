@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">prueba-1</string>
+    <string-array name="opc">
+        <item>hamburgesas</item>
+        <item>pizzas</item>
+        <item>tablas</item>
+        <item>cocteles</item>
+
+    </string-array>
+</resources>
