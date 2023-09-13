@@ -13,11 +13,16 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-
+    List<lista_elementos> elementos;
     private ToggleButton tb1;
     private RatingBar rbar;
     private Button pagar;
@@ -45,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         credito = findViewById(R.id.credito);
         ib_1 = findViewById(R.id.ib_1);
 
-
+        init();
         onoff();
         carga();
         checkboxes();
@@ -56,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         ib_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, detalle.class );
-                startActivity(i);
+                Intent a = new Intent(MainActivity.this, detalle.class );
+                startActivity(a);
             }
         });
     }
@@ -160,6 +165,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void init(){
+        elementos = new ArrayList<>();
+        elementos.add(new lista_elementos("Hamburguesa Clásica","Carne de res molida, " + "Lechuga, " + "Tomate, " + "Cebolla, " + "Queso cheddar, " + "Pan de hamburguesa ","hay stock"));
+        elementos.add(new lista_elementos("Hamburguesa BBQ","Carne de res molida, " + "Salsa barbacoa, " + "Cebolla caramelizada, " + "Queso suizo, " + "Pan de hamburguesa","No hay stock"));
+        elementos.add(new lista_elementos("Hamburguesa Vegetariana","Hamburguesa de garbanzos o soja, " + "Lechuga, " + "Tomate, " + "Cebolla morada, " + "Pan de hamburguesa integral","hay stock"));
+        elementos.add(new lista_elementos("Hamburguesa Mexicana","Carne de res molida sazonada con especias mexicanas, " + "Guacamole, " + "Jalapeños, " + "Queso cheddar o queso mexicano, " + "Pan de hamburguesa","hay stock"));
+
+
+        adaptador adaptador= new adaptador(elementos,this);
+        RecyclerView recyclerView = findViewById(R.id.lista);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adaptador);
+    }
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
