@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RatingBar;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar pbar;
     private CheckBox mayo, ketchup, picante;
     private RadioButton efectivo, debito, credito;
-    private ImageButton ib_1;
+    private ImageButton ib_1,pizza,limonada,suchi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +51,16 @@ public class MainActivity extends AppCompatActivity {
         debito = findViewById(R.id.debito);
         credito = findViewById(R.id.credito);
         ib_1 = findViewById(R.id.ib_1);
+        pizza = findViewById(R.id.pizza);
+        limonada = findViewById(R.id.limonada);
+        suchi = findViewById(R.id.suchi);
 
         init();
         onoff();
         carga();
         checkboxes();
         radio();
+        alerta();
 
 
 
@@ -62,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent a = new Intent(MainActivity.this, detalle.class );
+                startActivity(a);
+            }
+        });
+        pizza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(MainActivity.this, Pizza.class);
                 startActivity(a);
             }
         });
@@ -183,4 +196,14 @@ public class MainActivity extends AppCompatActivity {
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+    public void alerta (){
+        AlertDialog.Builder b = new AlertDialog.Builder(MainActivity.this);
+        b.setCancelable(true);
+        b.setTitle("arriba las manos");
+        b.setMessage("ESTO ES UN ASALTO");
+        b.show();
+
+    }
+
 }

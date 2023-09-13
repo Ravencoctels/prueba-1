@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prueba_1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/tabla"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
 
     <ScrollView
         android:id="@+id/prueba"
@@ -23,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:entries="@array/opc"/>
+                android:entries="@array/opc" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -167,38 +171,55 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/editTextText3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="Name" />
+                    <ImageButton
+                        android:id="@+id/limonada"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/jarra" />
 
-                    <Button
-                        android:id="@+id/button10"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:text="limonada fresca recien exprimida" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/editTextText4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="Name" />
+                    <ImageButton
+                        android:id="@+id/pizza"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/pizza" />
 
-                    <Button
-                        android:id="@+id/button11"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button" />
+                        android:text="incluye una masa de pan crujiente, salsa de tomate, queso mozzarella derretido y una variedad de ingredientes a elección. Algunas opciones populares son pepperoni, champiñones, pimientos y aceitunas. Esta deliciosa combinación de sabores y texturas es horneada hasta obtener una pizza perfectamente dorada y lista para disfrutar" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/suchi"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@mipmap/chuchi" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="arroz sazonado con vinagre, pescado crudo o ingredientes como aguacate y pepino. Se envuelve en una fina lámina de alga nori y se corta en pequeños rollos. Se sirve con salsa de soja, jengibre encurtido y wasabi para realzar su sabor." />
                 </TableRow>
             </TableLayout>
 

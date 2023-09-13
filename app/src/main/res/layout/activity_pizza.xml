@@ -12,20 +12,20 @@
         android:layout_width="987dp"
         android:layout_height="337dp"
         android:layout_marginTop="4dp"
-        android:text="Nuestra Hamburguesa Deluxe es una obra maestra culinaria. Comienza con una jugosa hamburguesa de carne de res a la parrilla, cubierta con queso cheddar derretido, lechuga, tomate y cebolla morada. La salsa secreta y el panecillo tostado completan esta experiencia gourmet."
+        android:text="incluye una masa de pan crujiente, salsa de tomate, queso mozzarella derretido y una variedad de ingredientes a elección. Algunas opciones populares son pepperoni, champiñones, pimientos y aceitunas. Esta deliciosa combinación de sabores y texturas es horneada hasta obtener una pizza perfectamente dorada y lista para disfrutar"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ib_1_1" />
+        app:layout_constraintTop_toBottomOf="@+id/Pizza" />
 
     <ImageButton
-        android:id="@+id/ib_1_1"
+        android:id="@+id/Pizza"
         android:layout_width="1268dp"
         android:layout_height="353dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/burger" />
+        app:srcCompat="@mipmap/pizza" />
 </androidx.constraintlayout.widget.ConstraintLayout>

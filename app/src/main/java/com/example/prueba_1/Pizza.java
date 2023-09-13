@@ -7,25 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class detalle extends AppCompatActivity {
+public class Pizza extends AppCompatActivity {
 
-    private ImageButton ib_1_1;
+    private ImageButton Pizza;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalle);
-        ib_1_1 = findViewById(R.id.ib_1_1);
+        setContentView(R.layout.activity_pizza);
+        Pizza = (ImageButton) findViewById(R.id.Pizza);
 
 
-        ib_1_1.setOnClickListener(new View.OnClickListener() {
+        Pizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a = new Intent(detalle.this, MainActivity.class );
+                Intent a = new Intent(Pizza.this, MainActivity.class);
                 startActivity(a);
             }
         });
-
     }
 }
